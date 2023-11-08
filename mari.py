@@ -67,3 +67,6 @@ def my_function(M,i,j):
     return M
 
 #proba
+
+### exercises
+
