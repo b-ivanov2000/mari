@@ -55,3 +55,13 @@ Result
 
 
 # tralalalala
+# solution for 1:
+def my_function(M,i,j):
+    # Save j-th column in column_jth
+    column_jth = []
+    for row_index in range(len(M)):
+        for column_index in range(len(M[row_index])):
+            if column_index == j:
+                column_jth.append(M[row_index][column_index])
+    M[i] = column_jth
+    return M
