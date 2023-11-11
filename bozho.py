@@ -98,3 +98,111 @@ print(a)
 
 
 # tralalalala
+
+# Let M be an n×m
+#  matrix of numbers organized as a list-of-lists with n
+#  lists where each inner list has length m
+# . You can assume that all inner lists have the same size m
+#  and you can assume M to be non-empty.
+#
+# Write a Python function called my_function(M) that, given a matrix M, returns the sum of its upper triangular part.
+#
+# Keep in mind the following caveats and definitions:
+#
+# the upper triangular of a matrix is defined as the portion of the matrix composed by only elements lying above (and including) the main diagonal
+#
+# normally, triangular matrices are special cases of square matrices (namely matrices whose number of rows is equal to the number of columns): if n
+#  is not equal to m
+# , the function must return -1
+#
+# if the matrix is a square matrix but there is at least one negative element (regardless of its position), the function must return -2
+#
+# For example:
+#
+# Test	Result
+# M = [[1,2,3], [4,5,6], [7,8,9]]
+# print(my_function(M))
+# 26
+
+def my_function(M):
+    if len(M) != len(M[0]):
+        return -1
+    
+    summ = 0
+    for row_i in range(len(M)):
+        current_row = M[row_i]
+        for col_i in range(len(current_row)):
+            current_elem = current_row[col_i]
+            if current_elem < 0:
+                return -2
+            if col_i >= row_i:
+                summ += current_elem
+
+    return summ
+
+M = [[1,2,3], [4,5,6], [7,8,9]]
+print(my_function(M))
+
+# Let M be an n×m
+#  matrix of numbers organized as a list-of-lists with n
+#  lists where each inner list has length m
+# . Write a function called my_function(M) that takes as input a matrix M and returns its transpose.
+#
+# Keep in mind the following caveats and definitions:
+#
+# if the input matrix is empty, the function must return -1
+#
+# the input list-of-lists must indeed be a valid matrix where all rows have the same length m
+# : if this does not hold, the function must return -2
+#
+# the transpose of an n×m
+#  matrix is a new m×n
+#  matrix where the item in position (i,j)
+#  of the original matrix lies in position (j,i)
+#  in the transposed matrix
+#
+# For example:
+#
+# Test	Result
+# M = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12]]
+# print(my_function(M))
+# [[1, 4, 7, 10], [2, 5, 8, 11], [3, 6, 9, 12]]
+
+def my_function(M):
+    if len(M) == 0:
+        return -1
+    
+    row_len = len(M[0])
+
+    for row in M:
+        if len(row) != row_len:
+            return -2
+        
+    return [list(i) for i in zip(*M)]
+
+M = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12]]
+print(my_function(M))
+
+# mozhe bi po lesno shte rezberesh tova no e mn po trudno
+
+def my_function(M):
+    if len(M) == 0:
+        return -1
+    
+
+    rows = len(M)
+    cols = len(M[0])
+
+    transposed = [[0] * rows] * cols
+
+    for i in range(cols):
+        temp_list = []
+        for j in range(rows):
+            value = M[j][i]
+            temp_list.append(value)
+        transposed[i] = temp_list
+        
+    return transposed
+
+M = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12]]
+print(my_function(M))
