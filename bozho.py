@@ -2,6 +2,8 @@
 #c. Dictionaries are mutable and can be modified after creation.
 
 #There are two main methods to remove items from a list: remove() and pop(). Which of the following statements are true?
+#b. lst.remove(v) yields an error if v is not in lst
+#c. pop() by default removes the last item of the list
 
 #Which of the following claims are true?
 #c. After the execution of the Python statement first = [], the statements second = [] and second = first will produce the same references in memory
