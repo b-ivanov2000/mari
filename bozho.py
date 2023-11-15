@@ -1,3 +1,4 @@
+# !!! pls kazhi ako e okay
 #Which of the following statements about dictionaries in Python is true?
 #c. Dictionaries are mutable and can be modified after creation.
 
