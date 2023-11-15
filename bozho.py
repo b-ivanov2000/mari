@@ -3,6 +3,10 @@
 
 #There are two main methods to remove items from a list: remove() and pop(). Which of the following statements are true?
 
+#Which of the following claims are true?
+#c. After the execution of the Python statement first = [], the statements second = [] and second = first will produce the same references in memory
+#e. After the statement new_list = my_list, new_list is a clone of my_list
+
 
 def calculate_student_averages(gradebook_input):
     return_list = []
