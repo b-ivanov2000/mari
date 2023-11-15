@@ -8,7 +8,7 @@
 #Which of the following claims are true?
 #b. After the two Python statements first = [] and second = first, second is an alias of first
 #c. After the execution of the Python statement first = [], the statements second = [] and second = first will produce the same references in memory
-#e. After the statement new_list = my_list, new_list is a clone of my_list
+#d. While using new_list = my_list, any modifications to new_list will also change my_list
 
 
 def calculate_student_averages(gradebook_input):
