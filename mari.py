@@ -72,5 +72,4 @@ print(updated_status)
 {'The Great Gatsby': 'in', 'To Kill a Mockingbird': 'in', '1984': 'out', 'The Catcher in the Rye': 'out'}
 
 
-vfg
 
