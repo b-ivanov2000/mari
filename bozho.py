@@ -19,3 +19,24 @@ def calculate_student_averages(gradebook_input):
 gradebook = [[78, 82, 85], [92, 88, 91], [83, 76, 79], [95, 92]]
 student_averages = calculate_student_averages(gradebook)
 print(student_averages)
+
+def update_library(current_status, transactions):
+    for (book, transaction) in transactions:
+        current_status[book] = transaction
+    return current_status
+
+current_status = {
+    "The Great Gatsby": "in",
+    "To Kill a Mockingbird": "out",
+    "1984": "in",
+}
+
+transactions = [
+    ("To Kill a Mockingbird", "in"),
+    ("The Catcher in the Rye", "out"),
+    ("1984", "out"),
+]
+
+updated_status = update_library(current_status, transactions)
+updated_skills = dict(sorted(updated_status.items()))   # HACK, ignore this
+print(updated_status)
