@@ -48,3 +48,4 @@ transactions = [
 updated_status = update_library(current_status, transactions)
 updated_skills = dict(sorted(updated_status.items()))   # HACK, ignore this
 print(updated_status)
+
