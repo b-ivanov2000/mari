@@ -1,64 +1,84 @@
-# пробни
+Consider the following recursive function:
 
-Write a recursive function my_function(L, K) that, given a list L of numbers and a number K strictly larger than 0, returns a new list obtained by decreasing every element of L by K. If L is empty, the function should return an empty list.
+def my_fun(k):
+
+    result = 0
+
+    if(k>0):
+
+        result = k+my_fun(k-2)
+
+    return result
+
+How many recursive calls does the function do on input 16?
+
+The initial call should be counted in the answer.
+
+Select one:
+a. 15
+b. 7
+c. 8
+d. 9
+e. 16
+
+What is a recursive function?
+Select one:
+a. A function that contains a call to itself
+b. A function that raises an exception
+c. A function that builds a linked list
+d. A function that contains a while loop
+
+    In
+    a
+    Python
 
 
+    class , instance variables whose name begins with an underscore:
+        Select
+        one:
 
-Back-of-the-envelope example: my_function([2,12,3,7], 2) should return [0, 10, 1, 5]
 
+    a.Cannot
+    be
+    defined
+    b.Are
+    special
+    methods
+    c.Are
+    part
+    of
+    the
+    public
+    interface
+    of
+    the
+
+
+    class , by convention
+
+
+    d.Are
+    private
+    members
+    of
+    the
+    class , by convention
+
+
+Define a class Wallet to represent a personal digital wallet. The user will be able to load money in the wallet, and then to spend money to purchase items. The class shall provide the following methods:
+
+Constructor: does not take any parameter: it initialises an empty wallet (i.e., starting credit is 0)
+load(amount): when called, the amount of money amount shall be added to the wallet credit
+get_credit(): returns the current balance of the wallet
+purchase(price): purchases an item whose price is price. Returns True on success, i.e., if there is enough credit in the wallet the transaction is completed. Returns False if there is not enough credit, and the transaction is aborted (i.e., item is not purchased).
 For example:
 
 Test	Result
-a = my_function([2,12,3,7], 2)
-print(a)
-[0, 10, 1, 5]
+w = Wallet()
+# Let's load some money
+w.load(10.00)
+# We buy an item
+success = w.purchase(6.00)
+print(success)
+True
 
-
-def my_function(L, K):
-    if len(L) == 0:
-        return []
-    else:
-        x = L[0] - K
-        x = [x]
-
-        return x + my_function(L[1:], K)
-
-Write a recursive function my_function(S) that, given a lower-case string S, returns the list containing all vowels in S. Each vowel should appear in the output list as many times and in the same order in which it appears in S. If the string is empty or there are no vowels in S, the function should return an empty list.
-
-
-
-Back-of-the-envelope example: my_function("luiss learn is the best") should return ['u', 'i', 'e' , 'a', 'i', 'e', 'e' ]
-
-For example:
-
-Test	Result
-a = my_function("luiss learn is the best")
-print(a)
-['u', 'i', 'e', 'a', 'i', 'e', 'e']
-
-
-def my_function(S):
-    if S == '':
-        return []
-    v = "aeiou"
-    if S[0] in v:
-        return [S[0]] + my_function(S[1:])
-    else:
-        return [] + my_function(S[1:])
-
-a = my_function("luiss learn is the best")
-print(a)
-
-Write a recusive function my_function(s) that, given a string s composed by 0's and 1's representing a binary number, converts the binary number into base 10. You can assume the string to be non-empty.
-
-For example:
-
-Test	Result
-print(my_function("1010"))
-10
-
-def my_function(s):
-    if s == "":
-        return 0
-    bit = int(s[0])
-    return bit*(2**len(s)-1 + my_function(s[1:]))
