@@ -82,3 +82,17 @@ success = w.purchase(6.00)
 print(success)
 True
 
+
+def class:
+    def __init__(self):
+        self.wallet = 0
+    def load(amount):
+        self.wallet += amount
+    def get_credit():
+        return self.wallet
+    def purchase(price):
+        if self.wallet >= price:
+            self.wallet -= price
+            return True
+        else:
+            return False
