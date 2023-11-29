@@ -29,3 +29,4 @@ print(w.get_credit())
 
 # 1 -> d.
 # 2 -> a.
+# 3 -> b. ?
