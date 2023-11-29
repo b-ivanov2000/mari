@@ -26,3 +26,5 @@ print(success)
 another_success = w.purchase(5)
 print(another_success)
 print(w.get_credit())
+
+# 1 -> d.
