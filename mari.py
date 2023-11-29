@@ -28,41 +28,38 @@ b. A function that raises an exception
 c. A function that builds a linked list
 d. A function that contains a while loop
 
-    In
-    a
-    Python
+In
+a
+Python
 
 
-    class , instance variables whose name begins with an underscore:
-        Select
-        one:
+class , instance variables whose name begins with an underscore:
+    Select
+    one:
 
 
-    a.Cannot
-    be
-    defined
-    b.Are
-    special
-    methods
-    c.Are
-    part
-    of
-    the
-    public
-    interface
-    of
-    the
+b.Are
+special
+methods
+c.Are
+part
+of
+the
+public
+interface
+of
+the
 
 
-    class , by convention
+class , by convention
 
 
-    d.Are
-    private
-    members
-    of
-    the
-    class , by convention
+d.Are
+private
+members
+of
+the
+class , by convention
 
 
 Define a class Wallet to represent a personal digital wallet. The user will be able to load money in the wallet, and then to spend money to purchase items. The class shall provide the following methods:
@@ -83,14 +80,14 @@ print(success)
 True
 
 
-def class:
+class Wallet:
     def __init__(self):
         self.wallet = 0
-    def load(amount):
+    def load(self, amount):
         self.wallet += amount
-    def get_credit():
+    def get_credit(self):
         return self.wallet
-    def purchase(price):
+    def purchase(self, price):
         if self.wallet >= price:
             self.wallet -= price
             return True
