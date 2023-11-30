@@ -41,3 +41,6 @@ play_max_rating = max(player_counter_mean, key=player_counter_mean.get)
 print(players["player_name"][players["player_api_id"].index(play_max_rating)])
 
 print("TO DO dump in pickle")
+
+with open('query3.pkl', 'wb') as f:
+    pickle.dump(players["player_name"][players["player_api_id"].index(play_max_rating)], f)

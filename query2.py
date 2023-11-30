@@ -38,4 +38,6 @@ for team_home, team_away, idx in zip(matches["home_team_api_id"], matches["away_
 
 team_max_without_goal = max(teams_counter, key=teams_counter.get)
 print(teams["team_long_name"][teams["team_api_id"].index(team_max_without_goal)])
-print("TO DO> dump in pickle")
+
+with open('query2.pkl', 'wb') as f:
+    pickle.dump(teams["team_long_name"][teams["team_api_id"].index(team_max_without_goal)], f)

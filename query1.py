@@ -27,4 +27,6 @@ countries = read_csv("data/Country.csv", delimiter=",")
 max_length = max(len(item) for item in countries["name"])
 
 longest_elements = [item for item in countries["name"] if len(item) == max_length]
-print("TO DO: dump in pickle")
+
+with open('query1.pkl', 'wb') as f:
+    pickle.dump(longest_elements, f)
